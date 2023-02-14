@@ -22,10 +22,14 @@ root.geometry("361x381+500+200")  #(Here 361=>width, 381=>height)
 val=''
 data=StringVar()    
 display=Entry(root,textvariable=data,bd=29,justify="right",bg="powder blue",font=("Ariel",20))
-display.grid(row=0,columnspan=4)
+display.grid(row=0,columnspan=5)
 
 ## Buttons ##
-btn7=Button(root,text="7",font=("Arial",12,"bold"),bd=12,height=2,width=6,command=lambda : btnClick(7))  # To pass arguments(=>7) in function we use lambda  
+
+##Row1
+
+
+btn7=Button(root,text="7",font=("Arial",12,"bold"),bd=12,height=1,width=6,command=lambda : btnClick(7))  # To pass arguments(=>7) in function we use lambda  
 btn7.grid(row=1,column=0)
 btn8=Button(root,text="8",font=("Arial",12,"bold"),bd=12,height=2,width=6,command=lambda : btnClick(8))
 btn8.grid(row=1,column=1)
@@ -60,4 +64,7 @@ btn_eq=Button(root,text="=",font=("Arial",12,"bold"),bd=12,height=2,width=6,comm
 btn_eq.grid(row=4,column=2)
 btn_div=Button(root,text="÷",font=("Arial",12,"bold"),bd=12,height=2,width=6,command=lambda : btnClick('/'))
 btn_div.grid(row=4,column=3)
+
+btn_dot=Button(root,text=">",font=("Arial",12,"bold"),bd=12,height=2,width=6,command=lambda : btnClick('>'))
+btn_dot.grid(row=5,column=5)
 root.mainloop()
